@@ -1,7 +1,8 @@
 {
   "name": "reacting",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "https://bykutom.github.io/React-Todo-List",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
