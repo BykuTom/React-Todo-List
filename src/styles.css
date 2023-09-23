@@ -13,7 +13,7 @@ html {
 
 body {
   width: 100%;
-  background: #405661;
+  background: #434c59;
   color: azure;
   padding: 1rem;
   font-size: 16px;
@@ -39,15 +39,23 @@ h1 {
   flex-direction: column;
   gap: 0.1rem;
 }
+.form-row input {
+  padding: 0.64rem;
+  background: transparent;
+  border: 0.2rem solid aliceblue;
+  color: aliceblue;
+}
 .button {
-  background: #333;
+  background-color: orange;
   border: none;
-  border-radius: 8px;
   color: aliceblue;
   padding: 0.5rem;
   cursor: pointer;
+  border-radius: 0.16rem;
 }
-
+.list {
+  text-align: center;
+}
 ul li {
   display: flex;
   flex-direction: row;
@@ -57,10 +65,14 @@ ul li {
   margin: auto;
   padding-bottom: 1rem;
 }
+ul li input {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+}
 ul li label {
   display: inherit;
   gap: 0.64rem;
-  border: 0.2rem solid whitesmoke;
+  border: 0.2rem solid aliceblue;
   width: 100%;
   max-width: 40rem;
 
@@ -68,12 +80,11 @@ ul li label {
 }
 ul li button {
   display: flex;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
   align-items: center;
   justify-content: center;
 }
 .button-edit {
   background-color: green;
-}
-.button-delete {
-  background-color: lightcoral;
 }
