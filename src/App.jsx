@@ -40,11 +40,34 @@ export default function App() {
     });
   }
 
+  function editTodo(id) {
+    let alreadyEdited = false;
+    setTodos((currentTodos) => {
+      return currentTodos.map((todo) => {
+        if (todo.id === id && !alreadyEdited) {
+          const previousTitle = todo.title;
+          todo.title = prompt("Edit Todo:", todo.title);
+          if (todo.title == null || todo.title === "") {
+            todo.title = previousTitle;
+          }
+          alreadyEdited = true;
+          return todo;
+        }
+        return todo;
+      });
+    });
+  }
+
   return (
     <>
       <TodoForm onSubmit={addTodo} />
       <h1 className="header">Todo List</h1>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList
+        todos={todos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+        editTodo={editTodo}
+      />
     </>
   );
 }

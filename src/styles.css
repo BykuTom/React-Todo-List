@@ -36,3 +36,14 @@ body {
   padding: 0.5rem;
   cursor: pointer;
 }
+
+ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+ul li label {
+  display: inherit;
+  gap: 0.64rem;
+}
