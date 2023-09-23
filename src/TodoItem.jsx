@@ -1,3 +1,5 @@
+import { FaTrash, FaPenToSquare } from "react-icons/fa6";
+
 export function TodoItem({
   completed,
   id,
@@ -8,21 +10,19 @@ export function TodoItem({
 }) {
   return (
     <li>
-      <label>
-        <input
-          type="checkbox"
-          checked={completed}
-          onChange={(event) => {
-            toggleTodo(id, event.target.checked);
-          }}
-        />
-        {title}
-      </label>
+      <input
+        type="checkbox"
+        checked={completed}
+        onChange={(event) => {
+          toggleTodo(id, event.target.checked);
+        }}
+      />
+      <label>{title}</label>
       <button onClick={() => editTodo(id)} className="button button-edit">
-        Edit
+        <FaPenToSquare />
       </button>
       <button onClick={() => deleteTodo(id)} className="button button-delete">
-        Delete
+        <FaTrash />
       </button>
     </li>
   );

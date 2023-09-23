@@ -7,21 +7,32 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 html {
+  width: 100vw;
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
   background: #405661;
   color: azure;
-  max-width: 400px;
   padding: 1rem;
   font-size: 16px;
 }
-
+#root {
+  display: flex;
+  flex-direction: column;
+}
 .new-item-form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  padding: 1.24rem;
 }
 .form-row {
   display: flex;
@@ -41,9 +52,28 @@ ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  margin: auto;
+  padding-bottom: 1rem;
 }
 ul li label {
   display: inherit;
   gap: 0.64rem;
+  border: 0.2rem solid whitesmoke;
+  width: 100%;
+  max-width: 40rem;
+
+  padding: 0.64rem;
+}
+ul li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-edit {
+  background-color: green;
+}
+.button-delete {
+  background-color: lightcoral;
 }
